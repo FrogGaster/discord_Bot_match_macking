@@ -20,6 +20,7 @@ def build_message_text(
     reserve: list[dict],
     stopped: bool = False,
     ping_everyone: bool = False,
+    created_by_id: int | None = None,
 ) -> str:
     prefix = "@everyone " if ping_everyone else ""
     lines = [
@@ -60,6 +61,9 @@ def build_message_text(
         lines.append("")
     status = "⛔ Запись закрыта" if stopped else "**КАТКА ПОД ЗАПИСЬ!** Запись по кнопкам ниже 👇"
     lines.append(status)
+    if created_by_id:
+        lines.append("")
+        lines.append(f"*Анонс от: <@{created_by_id}>*")
     return "\n".join(lines).strip()
 
 
@@ -129,10 +133,6 @@ class SignupView(discord.ui.View):
             unsub_btn = discord.ui.Button(label="Отписаться", custom_id=f"unsub:{self.message_id}", style=discord.ButtonStyle.danger)
             unsub_btn.callback = self._unsub_callback
             self.add_item(unsub_btn)
-        if not stopped:
-            rem_btn = discord.ui.Button(label="🔔 Напомнить", custom_id=f"remind:{self.message_id}", style=discord.ButtonStyle.secondary)
-            rem_btn.callback = self._remind_callback
-            self.add_item(rem_btn)
 
     def _make_callback(self, country_index: int):
         async def cb(interaction: discord.Interaction):
@@ -151,9 +151,6 @@ class SignupView(discord.ui.View):
 
     async def _unsub_callback(self, interaction: discord.Interaction):
         await handle_unsubscribe(interaction, self.message_id)
-
-    async def _remind_callback(self, interaction: discord.Interaction):
-        await handle_remind(interaction, self.message_id)
 
     @classmethod
     def from_game(cls, message_id: int) -> "SignupView | None":
@@ -176,31 +173,6 @@ async def handle_signup(interaction: discord.Interaction, message_id: int, count
         return
     await _update_message_and_roles(interaction, message_id, game)
     await _log_signup(interaction, message_id, game, country_index, "country")
-
-
-async def handle_remind(interaction: discord.Interaction, message_id: int) -> None:
-    await interaction.response.defer(ephemeral=True)
-    game = storage.get_game(message_id)
-    if not game or not interaction.guild:
-        return
-    users = set()
-    for players in game.get("signups", {}).values():
-        for p in players:
-            users.add(p["id"])
-    for p in game.get("reserve", []):
-        users.add(p["id"])
-    if not users:
-        return
-    pings = " ".join(f"<@{uid}>" for uid in users)
-    try:
-        ch = interaction.client.get_channel(game["channel_id"])
-        if ch:
-            thread_id = game.get("thread_id")
-            target = interaction.client.get_channel(thread_id) if thread_id else ch
-            if target:
-                await target.send(f"⏰ Напоминание: игра через 30 минут!\n{pings}")
-    except Exception:
-        pass
 
 
 async def handle_unsubscribe(interaction: discord.Interaction, message_id: int) -> None:
@@ -260,7 +232,7 @@ async def _update_message(bot, message_id: int, game: dict) -> None:
     text = build_message_text(
         game["date_time"], game["mod_name"], preset,
         game["signups"], game.get("reserve", []), game.get("stopped", False),
-        game.get("ping_everyone", False),
+        game.get("ping_everyone", False), game.get("created_by_id"),
     )
     view = SignupView.from_game(message_id)
     try:
@@ -308,15 +280,15 @@ def _get_country_names(preset: dict) -> list[tuple[str, int]]:
 class SlotsConfigView(discord.ui.View):
     """Выбор слотов: один Select для страны, один для кол-ва (Discord — макс 5 рядов)."""
 
-    def __init__(self, preset_id: str, preset: dict, mod_name: str, date_time: str, create_thread: bool, reminder_mins: int | None, guild_id: int, channel_id: int, ping_everyone: bool):
+    def __init__(self, preset_id: str, preset: dict, mod_name: str, date_time: str, create_thread: bool, guild_id: int, channel_id: int, ping_everyone: bool, created_by_id: int):
         super().__init__(timeout=300)
         self.preset_id = preset_id
         self.preset = preset
         self.mod_name = mod_name
         self.date_time = date_time
         self.create_thread = create_thread
-        self.reminder_mins = reminder_mins
         self.guild_id = guild_id
+        self.created_by_id = created_by_id
         self.channel_id = channel_id
         self.ping_everyone = ping_everyone
         self._countries = _get_country_names(preset)
@@ -357,13 +329,16 @@ class SlotsConfigView(discord.ui.View):
             await interaction.response.send_message("Сначала выберите страну.", ephemeral=True)
 
     async def _on_create(self, interaction: discord.Interaction):
+        if not interaction.user.guild_permissions.administrator:
+            await interaction.response.send_message("Только администраторы могут создавать анонсы.", ephemeral=True)
+            return
         await interaction.response.defer(ephemeral=True)
         countries = _get_country_names(self.preset)
         slots_list = [self.slots.get(idx, 1) for _, idx in countries]
         total = len(countries)
         text = build_message_text(
             self.date_time, self.mod_name, self.preset,
-            {str(i): [] for i in range(total)}, [], False, self.ping_everyone,
+            {str(i): [] for i in range(total)}, [], False, self.ping_everyone, self.created_by_id,
         )
         allowed = discord.AllowedMentions(everyone=self.ping_everyone) if self.ping_everyone else discord.AllowedMentions(everyone=False)
         channel = interaction.client.get_channel(self.channel_id)
@@ -381,9 +356,8 @@ class SlotsConfigView(discord.ui.View):
             message_id=msg.id, channel_id=self.channel_id, guild_id=self.guild_id,
             date_time=self.date_time, mod_name=self.mod_name, preset=self.preset,
             slots_per_country=slots_list, thread_id=thread_id, role_id=role_id, ping_everyone=self.ping_everyone,
+            created_by_id=self.created_by_id,
         )
-        if self.reminder_mins:
-            storage.update_game(msg.id, reminder_minutes=self.reminder_mins)
         view = SignupView.from_game(msg.id)
         await msg.edit(view=view)
         await interaction.followup.send("Анонс создан!", ephemeral=True)
@@ -400,7 +374,6 @@ class AnnonceModal(discord.ui.Modal, title="Создание анонса"):
     date_time = discord.ui.TextInput(label="Дата и время", placeholder="8 марта в 22:30 по МСК", max_length=100, required=True)
     mod_name = discord.ui.TextInput(label="Название мода", placeholder="The Great War Redux", max_length=100, required=True)
     create_thread = discord.ui.TextInput(label="Ветка под анонсом", placeholder="да", required=False, max_length=3)
-    reminder = discord.ui.TextInput(label="Напомнить за N минут", placeholder="30", required=False, max_length=5)
 
     def __init__(self, preset_id: str, mod_default: str = ""):
         super().__init__()
@@ -431,19 +404,16 @@ class AnnonceModal(discord.ui.Modal, title="Создание анонса"):
         date_time = self.date_time.value.strip()
         create_raw = self.create_thread.value.strip().lower()
         create = create_raw in ("да", "yes", "1", "д")
-        reminder_mins = None
-        rm = self.reminder.value.strip()
-        if rm.isdigit():
-            reminder_mins = min(120, max(5, int(rm)))
         guild_id = interaction.guild.id if interaction.guild else 0
         channel_id = interaction.channel_id or 0
         ping_everyone = bool(interaction.user.guild_permissions.administrator)
+        created_by_id = interaction.user.id
 
         log.info(f"[{interaction.guild.name if interaction.guild else 'DM'}] Создание анонса: переход к настройке слотов")
 
         slots_view = SlotsConfigView(
             preset_id=self.preset_id, preset=preset, mod_name=mod_display, date_time=date_time,
-            create_thread=create, reminder_mins=reminder_mins, guild_id=guild_id, channel_id=channel_id, ping_everyone=ping_everyone,
+            create_thread=create, guild_id=guild_id, channel_id=channel_id, ping_everyone=ping_everyone, created_by_id=created_by_id,
         )
         await interaction.response.send_message(
             "**Настройте слоты для каждой страны** (по умолчанию 1). Затем нажмите **Создать анонс**:",
@@ -475,6 +445,9 @@ class PresetSelect(discord.ui.Select):
 
     async def callback(self, interaction: discord.Interaction) -> None:
         try:
+            if not interaction.user.guild_permissions.administrator:
+                await interaction.response.send_message("Только администраторы могут создавать анонсы.", ephemeral=True)
+                return
             preset_id = self.values[0]
             if preset_id.startswith("custom:"):
                 name = preset_id[7:]
@@ -518,7 +491,11 @@ class PresetSelectView(discord.ui.View):
 
 class AnnonceCog(commands.Cog):
     @app_commands.command(name="annonce", description="Создать анонс игры")
+    @app_commands.default_permissions(administrator=True)
     async def annonce(self, interaction: discord.Interaction):
+        if not interaction.user.guild_permissions.administrator:
+            await interaction.response.send_message("Только администраторы могут создавать анонсы.", ephemeral=True)
+            return
         view = PresetSelectView(interaction.guild_id)
         await interaction.response.send_message("Выберите пресет стран:", view=view, ephemeral=False)
 
@@ -543,7 +520,7 @@ class AnnonceCog(commands.Cog):
             text = build_message_text(
                 game["date_time"], game["mod_name"], preset,
                 game["signups"], game.get("reserve", []), game.get("stopped", False),
-                game.get("ping_everyone", False),
+                game.get("ping_everyone", False), game.get("created_by_id"),
             )
             view = SignupView.from_game(mid)
             try:
@@ -578,7 +555,7 @@ class AnnonceCog(commands.Cog):
             text = build_message_text(
                 game["date_time"], game["mod_name"], preset,
                 game["signups"], game.get("reserve", []), True,
-                game.get("ping_everyone", False),
+                game.get("ping_everyone", False), game.get("created_by_id"),
             )
             view = SignupView.from_game(mid)
             try:
@@ -638,7 +615,7 @@ class AnnonceCog(commands.Cog):
                 text = build_message_text(
                     game["date_time"], game["mod_name"], preset,
                     game["signups"], game.get("reserve", []), game.get("stopped", False),
-                    game.get("ping_everyone", False),
+                    game.get("ping_everyone", False), game.get("created_by_id"),
                 )
                 new_msg = await channel.send(content=text)
                 storage.delete_game(mid)
@@ -648,7 +625,7 @@ class AnnonceCog(commands.Cog):
                     slots_per_country=[c["slots"] for c in game["countries"]],
                     thread_id=game.get("thread_id"), role_id=game.get("role_id"),
                     signups=game.get("signups"), reserve=game.get("reserve", []), stopped=game.get("stopped", False),
-                    ping_everyone=game.get("ping_everyone", False),
+                    ping_everyone=game.get("ping_everyone", False), created_by_id=game.get("created_by_id"),
                 )
                 view = SignupView.from_game(new_msg.id)
                 await new_msg.edit(view=view)

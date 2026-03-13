@@ -55,6 +55,7 @@ def save_game(
     reserve: list | None = None,
     stopped: bool = False,
     ping_everyone: bool = False,
+    created_by_id: int | None = None,
 ) -> None:
     """Сохраняет новую игру."""
     country_names = []
@@ -91,8 +92,8 @@ def save_game(
         "stopped": stopped,
         "thread_id": thread_id,
         "role_id": role_id,
-        "reminder_minutes": None,
         "ping_everyone": ping_everyone,
+        "created_by_id": created_by_id,
     }
     _save_games(data)
 
