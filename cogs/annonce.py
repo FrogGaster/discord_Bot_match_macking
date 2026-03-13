@@ -306,7 +306,7 @@ def _get_country_names(preset: dict) -> list[tuple[str, int]]:
 
 
 class SlotsConfigView(discord.ui.View):
-    """Выбор слотов для каждой страны через выпадающие списки."""
+    """Выбор слотов: один Select для страны, один для кол-ва (Discord — макс 5 рядов)."""
 
     def __init__(self, preset_id: str, preset: dict, mod_name: str, date_time: str, create_thread: bool, reminder_mins: int | None, guild_id: int, channel_id: int, ping_everyone: bool):
         super().__init__(timeout=300)
@@ -319,29 +319,42 @@ class SlotsConfigView(discord.ui.View):
         self.guild_id = guild_id
         self.channel_id = channel_id
         self.ping_everyone = ping_everyone
-        countries = _get_country_names(preset)
-        self.slots = {idx: 1 for _, idx in countries}
+        self._countries = _get_country_names(preset)
+        self.slots = {idx: 1 for _, idx in self._countries}
+        self._pending_country: int | None = None
+
+        country_opts = [
+            discord.SelectOption(label=f"{name[:90]}", value=str(idx), description=f"сейчас: {self.slots[idx]} сл.")
+            for name, idx in self._countries[:25]
+        ]
         _sl = lambda n: "слотов" if n >= 5 else ("слота" if n >= 2 else "слот")
         slot_opts = [discord.SelectOption(label=f"{n} {_sl(n)}", value=str(n)) for n in range(1, 6)]
-        for i, (name, idx) in enumerate(countries[:25]):
-            short = name[:25] + ".." if len(name) > 25 else name
-            sel = discord.ui.Select(
-                placeholder=f"{short} — слотов",
-                options=slot_opts,
-                custom_id=f"slots:{idx}",
-            )
-            sel.callback = self._make_slot_callback(idx)
-            self.add_item(sel)
+
+        sel_country = discord.ui.Select(placeholder="Выберите страну", options=country_opts, custom_id="slots_country")
+        sel_country.callback = self._on_country_select
+        self.add_item(sel_country)
+
+        sel_slots = discord.ui.Select(placeholder="Слотов для выбранной страны", options=slot_opts, custom_id="slots_num")
+        sel_slots.callback = self._on_slot_select
+        self.add_item(sel_slots)
+
         btn = discord.ui.Button(label="Создать анонс", style=discord.ButtonStyle.success, custom_id="create_annonce")
         btn.callback = self._on_create
         self.add_item(btn)
 
-    def _make_slot_callback(self, idx: int):
-        async def cb(interaction: discord.Interaction):
-            val = int(interaction.data["values"][0])
-            self.slots[idx] = val
-            await interaction.response.defer(ephemeral=True)
-        return cb
+    async def _on_country_select(self, interaction: discord.Interaction):
+        self._pending_country = int(interaction.data["values"][0])
+        name = next(n for n, i in self._countries if i == self._pending_country)
+        await interaction.response.send_message(f"Выбрана **{name}**. Укажите слоты в списке выше.", ephemeral=True)
+
+    async def _on_slot_select(self, interaction: discord.Interaction):
+        val = int(interaction.data["values"][0])
+        if self._pending_country is not None:
+            self.slots[self._pending_country] = val
+            name = next(n for n, i in self._countries if i == self._pending_country)
+            await interaction.response.send_message(f"✓ **{name}** — {val} сл.", ephemeral=True)
+        else:
+            await interaction.response.send_message("Сначала выберите страну.", ephemeral=True)
 
     async def _on_create(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)

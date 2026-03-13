@@ -379,3 +379,12 @@ aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-u
 2026-03-09 20:55:48,465 [INFO] discord.gateway: Shard ID None has successfully RESUMED session a5fa5ed2b66ac6d4a002e26b91ca59cd.
 2026-03-09 22:28:22,604 [INFO] discord.gateway: Shard ID None has successfully RESUMED session a5fa5ed2b66ac6d4a002e26b91ca59cd.
 2026-03-09 23:05:41,000 [INFO] discord.gateway: Shard ID None has successfully RESUMED session a5fa5ed2b66ac6d4a002e26b91ca59cd.
+2026-03-13 21:47:17,327 [WARNING] discord.client: PyNaCl is not installed, voice will NOT be supported
+2026-03-13 21:47:17,328 [WARNING] discord.client: davey is not installed, voice will NOT be supported
+2026-03-13 21:47:17,336 [INFO] discord.client: logging in using static token
+2026-03-13 21:47:18,917 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: c9c9789683416865d84fc0a1e856ba87).
+2026-03-13 21:47:20,930 [INFO] bot: Бот запущен: Сталин#6015 (ID: 1258859797252407356)
+2026-03-13 21:47:20,930 [INFO] bot: Сервер: Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ! (ID: 1258553172641714218)
+2026-03-13 21:47:21,160 [INFO] bot:   [Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ!] Синхронизировано 0 команд
+2026-03-13 21:47:21,160 [INFO] bot: Сервер: Подвал Путина (ID: 1258855586569912403)
+2026-03-13 21:47:21,439 [INFO] bot:   [Подвал Путина] Синхронизировано 0 команд
