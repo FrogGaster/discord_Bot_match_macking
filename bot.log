@@ -1,0 +1,381 @@
+2026-03-09 17:33:10,018 [WARNING] discord.client: PyNaCl is not installed, voice will NOT be supported
+2026-03-09 17:33:10,019 [WARNING] discord.client: davey is not installed, voice will NOT be supported
+2026-03-09 17:33:10,025 [INFO] discord.client: logging in using static token
+2026-03-09 17:33:11,666 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: 27dcd1b76dafe3b3442bee6626937468).
+2026-03-09 17:33:13,669 [INFO] bot: Бот запущен: Сталин#6015 (ID: 1258859797252407356)
+2026-03-09 17:33:13,669 [INFO] bot: Сервер: Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ! (ID: 1258553172641714218)
+2026-03-09 17:33:13,927 [INFO] bot:   [Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ!] Синхронизировано 0 команд
+2026-03-09 17:33:40,875 [INFO] annonce: [] Создание анонса: user=moorluck, admin=False
+2026-03-09 17:33:40,876 [INFO] annonce: [] ping_everyone=False (admin=False)
+2026-03-09 17:33:40,877 [INFO] annonce: [] Права бота в канале: mention_everyone=False, create_public_threads=False
+2026-03-09 17:33:41,474 [INFO] annonce: [] Сообщение отправлено, @everyone в тексте: False
+2026-03-09 17:33:41,474 [INFO] annonce: [] Создать ветку: '' -> False
+2026-03-09 17:33:41,476 [INFO] storage: save_game: msg=1480574314758803557 guild=1258855586569912403 slots=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ping_everyone=False
+2026-03-09 17:33:43,748 [INFO] annonce: [] Создание анонса: user=tvinkfesslegion, admin=False
+2026-03-09 17:33:43,748 [INFO] annonce: [] ping_everyone=False (admin=False)
+2026-03-09 17:33:43,749 [INFO] annonce: [] Права бота в канале: mention_everyone=False, create_public_threads=False
+2026-03-09 17:33:45,853 [INFO] annonce: [] Сообщение отправлено, @everyone в тексте: False
+2026-03-09 17:33:45,854 [INFO] annonce: [] Создать ветку: '2' -> False
+2026-03-09 17:33:45,856 [INFO] storage: save_game: msg=1480574327119155433 guild=1258855586569912403 slots=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ping_everyone=False
+2026-03-09 17:34:55,112 [INFO] annonce: [] Создание анонса: user=moorluck, admin=False
+2026-03-09 17:34:55,113 [INFO] annonce: [] ping_everyone=False (admin=False)
+2026-03-09 17:34:55,115 [INFO] annonce: [] Права бота в канале: mention_everyone=False, create_public_threads=False
+2026-03-09 17:34:55,916 [INFO] annonce: [] Сообщение отправлено, @everyone в тексте: False
+2026-03-09 17:34:55,917 [INFO] annonce: [] Создать ветку: 'да' -> True
+2026-03-09 17:34:56,131 [WARNING] annonce: [] Ошибка создания ветки: 403 Forbidden (error code: 50001): Missing Access
+2026-03-09 17:34:56,132 [INFO] storage: save_game: msg=1480574626936393896 guild=1258855586569912403 slots=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ping_everyone=False
+2026-03-09 17:39:51,911 [INFO] annonce: [] Создание анонса: user=moorluck, admin=False
+2026-03-09 17:39:51,912 [INFO] annonce: [] ping_everyone=False (admin=False)
+2026-03-09 17:39:51,912 [INFO] annonce: [] Права бота в канале: mention_everyone=False, create_public_threads=False
+2026-03-09 17:39:52,619 [INFO] annonce: [] Сообщение отправлено, @everyone в тексте: False
+2026-03-09 17:39:52,619 [INFO] annonce: [] Создать ветку: 'да' -> True
+2026-03-09 17:39:52,870 [WARNING] annonce: [] Ошибка создания ветки: 403 Forbidden (error code: 50001): Missing Access
+2026-03-09 17:39:52,871 [INFO] storage: save_game: msg=1480575871046914190 guild=1258855586569912403 slots=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ping_everyone=False
+2026-03-09 17:40:10,139 [WARNING] discord.client: PyNaCl is not installed, voice will NOT be supported
+2026-03-09 17:40:10,140 [WARNING] discord.client: davey is not installed, voice will NOT be supported
+2026-03-09 17:40:10,146 [INFO] discord.client: logging in using static token
+2026-03-09 17:40:11,516 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: 6bf4137bbcb6a21ef1a6921c3e98aa71).
+2026-03-09 17:40:13,522 [INFO] bot: Бот запущен: Сталин#6015 (ID: 1258859797252407356)
+2026-03-09 17:40:13,523 [INFO] bot: Сервер: Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ! (ID: 1258553172641714218)
+2026-03-09 17:40:13,755 [INFO] bot:   [Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ!] Синхронизировано 0 команд
+2026-03-09 17:41:08,585 [INFO] annonce: [] Создание анонса: user=moorluck, admin=False
+2026-03-09 17:41:08,586 [INFO] annonce: [] Слоты (ввод): '2,1,1,1,2'
+2026-03-09 17:41:08,587 [INFO] annonce: [] Слоты (парсинг): [2, 1, 1, 1, 2]
+2026-03-09 17:41:08,587 [INFO] annonce: [] ping_everyone=False (admin=False)
+2026-03-09 17:41:08,588 [INFO] annonce: [] Права бота в канале: mention_everyone=False, create_public_threads=False
+2026-03-09 17:41:09,180 [INFO] annonce: [] Сообщение отправлено, @everyone в тексте: False
+2026-03-09 17:41:09,180 [INFO] annonce: [] Создать ветку: 'да' -> True
+2026-03-09 17:41:09,403 [WARNING] annonce: [] Ошибка создания ветки: 403 Forbidden (error code: 50001): Missing Access
+2026-03-09 17:41:09,404 [INFO] storage: save_game: msg=1480576192699433063 guild=1258855586569912403 slots=[2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1] ping_everyone=False
+2026-03-09 17:43:31,662 [INFO] annonce: [Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ!] Создание анонса: user=moorluck, admin=True
+2026-03-09 17:43:31,662 [INFO] annonce: [Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ!] Слоты (ввод): '1'
+2026-03-09 17:43:31,665 [INFO] annonce: [Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ!] Слоты (парсинг): [1]
+2026-03-09 17:43:31,667 [INFO] annonce: [Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ!] ping_everyone=True (admin=True)
+2026-03-09 17:43:31,668 [INFO] annonce: [Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ!] Права бота в канале: mention_everyone=True, create_public_threads=True
+2026-03-09 17:43:32,221 [INFO] annonce: [Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ!] Сообщение отправлено, @everyone в тексте: True
+2026-03-09 17:43:32,221 [INFO] annonce: [Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ!] Создать ветку: '1' -> True
+2026-03-09 17:43:32,633 [INFO] annonce: [Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ!] Ветка создана: 1480576792816386058
+2026-03-09 17:43:32,635 [INFO] storage: save_game: msg=1480576792816386058 guild=1258553172641714218 slots=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ping_everyone=True
+2026-03-09 17:44:34,467 [INFO] annonce: [] Создание анонса: user=moorluck, admin=False
+2026-03-09 17:44:34,468 [INFO] annonce: [] Слоты (ввод): '2,1,1,1,2'
+2026-03-09 17:44:34,469 [INFO] annonce: [] Слоты (парсинг): [2, 1, 1, 1, 2]
+2026-03-09 17:44:34,469 [INFO] annonce: [] ping_everyone=False (admin=False)
+2026-03-09 17:44:34,470 [INFO] annonce: [] Права бота в канале: mention_everyone=False, create_public_threads=False
+2026-03-09 17:44:35,357 [INFO] annonce: [] Сообщение отправлено, @everyone в тексте: False
+2026-03-09 17:44:35,357 [INFO] annonce: [] Создать ветку: 'да' -> True
+2026-03-09 17:44:35,581 [WARNING] annonce: [] Ошибка создания ветки: 403 Forbidden (error code: 50001): Missing Access
+2026-03-09 17:44:35,582 [INFO] storage: save_game: msg=1480577057275772949 guild=1258855586569912403 slots=[2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1] ping_everyone=False
+2026-03-09 17:44:58,142 [INFO] annonce: [] Создание анонса: user=_keny_uwu_, admin=False
+2026-03-09 17:45:10,113 [WARNING] discord.gateway: Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "C:\Users\MoorLuck\Desktop\дс бот\bot.py", line 60, in <module>
+    asyncio.run(main())
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 2034, in _run_once
+    handle._run()
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ui\modal.py", line 216, in _scheduled_task
+    await self.on_submit(interaction)
+  File "C:\Users\MoorLuck\Desktop\дс бот\cogs\annonce.py", line 318, in on_submit
+    log.info(f"[{guild_name}] Создание анонса: user={interaction.user}, admin={is_admin}")
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1664, in _log
+    self.handle(record)
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1680, in handle
+    self.callHandlers(record)
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1736, in callHandlers
+    hdlr.handle(record)
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1026, in handle
+    self.emit(record)
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+
+2026-03-09 17:49:40,245 [INFO] annonce: [] Слоты (ввод): ''
+2026-03-09 17:49:40,248 [INFO] annonce: [] ping_everyone=False (admin=False)
+2026-03-09 17:49:40,248 [INFO] annonce: [] Права бота в канале: mention_everyone=False, create_public_threads=False
+2026-03-09 17:49:40,683 [ERROR] discord.ui.modal: Ignoring exception in modal <AnnonceModal timeout=None children=5>:
+Traceback (most recent call last):
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\ui\modal.py", line 216, in _scheduled_task
+    await self.on_submit(interaction)
+  File "C:\Users\MoorLuck\Desktop\дс бот\cogs\annonce.py", line 341, in on_submit
+    await interaction.response.send_message(content=text, allowed_mentions=allowed)
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\interactions.py", line 1085, in send_message
+    data = await adapter.create_interaction_response(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\webhook\async_.py", line 224, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+2026-03-09 17:49:40,906 [INFO] discord.gateway: Shard ID None session has been invalidated.
+2026-03-09 17:49:43,011 [WARNING] discord.client: PyNaCl is not installed, voice will NOT be supported
+2026-03-09 17:49:43,011 [WARNING] discord.client: davey is not installed, voice will NOT be supported
+2026-03-09 17:49:43,018 [INFO] discord.client: logging in using static token
+2026-03-09 17:49:44,713 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: a5fa5ed2b66ac6d4a002e26b91ca59cd).
+2026-03-09 17:49:46,724 [INFO] bot: Бот запущен: Сталин#6015 (ID: 1258859797252407356)
+2026-03-09 17:49:46,724 [INFO] bot: Сервер: Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ! (ID: 1258553172641714218)
+2026-03-09 17:49:46,944 [INFO] bot:   [Клуб Любителей Хойки ВХОД ТОЛЬКО ДЛЯ ГЕЕВ!] Синхронизировано 0 команд
+2026-03-09 17:50:41,288 [INFO] annonce: [] Создание анонса: user=moorluck, admin=False
+2026-03-09 17:50:41,288 [INFO] annonce: [] Слоты (ввод): '2'
+2026-03-09 17:50:41,289 [INFO] annonce: [] Слоты (парсинг): [2]
+2026-03-09 17:50:41,290 [INFO] annonce: [] ping_everyone=False (admin=False)
+2026-03-09 17:50:41,290 [INFO] annonce: [] Права бота в канале: mention_everyone=False, create_public_threads=False
+2026-03-09 17:50:41,967 [INFO] annonce: [] Сообщение отправлено, @everyone в тексте: False
+2026-03-09 17:50:41,967 [INFO] annonce: [] Создать ветку: '' -> False
+2026-03-09 17:50:41,969 [INFO] storage: save_game: msg=1480578594383069379 guild=1258855586569912403 slots=[2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ping_everyone=False
+2026-03-09 17:54:38,452 [INFO] annonce: [Подвал Путина] Создание анонса: user=moorluck, admin=True
+2026-03-09 17:54:38,452 [INFO] annonce: [Подвал Путина] Слоты (ввод): '2,1,1,1,2'
+2026-03-09 17:54:38,453 [INFO] annonce: [Подвал Путина] Слоты (парсинг): [2, 1, 1, 1, 2]
+2026-03-09 17:54:38,454 [INFO] annonce: [Подвал Путина] ping_everyone=True (admin=True)
+2026-03-09 17:54:38,454 [INFO] annonce: [Подвал Путина] Права бота в канале: mention_everyone=True, create_public_threads=True
+2026-03-09 17:54:39,698 [INFO] annonce: [Подвал Путина] Сообщение отправлено, @everyone в тексте: True
+2026-03-09 17:54:39,698 [INFO] annonce: [Подвал Путина] Создать ветку: 'да' -> True
+2026-03-09 17:54:40,061 [INFO] annonce: [Подвал Путина] Ветка создана: 1480579590433804443
+2026-03-09 17:54:40,062 [INFO] storage: save_game: msg=1480579590433804443 guild=1258855586569912403 slots=[2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1] ping_everyone=True
+2026-03-09 18:00:49,828 [INFO] annonce: [Подвал Путина] Создание анонса: user=moorluck, admin=True
+2026-03-09 18:00:49,828 [INFO] annonce: [Подвал Путина] Слоты (ввод): '2,1,1,1,2'
+2026-03-09 18:00:49,828 [INFO] annonce: [Подвал Путина] Слоты (парсинг): [2, 1, 1, 1, 2]
+2026-03-09 18:00:49,828 [INFO] annonce: [Подвал Путина] ping_everyone=True (admin=True)
+2026-03-09 18:00:49,828 [INFO] annonce: [Подвал Путина] Права бота в канале: mention_everyone=True, create_public_threads=True
+2026-03-09 18:00:51,910 [INFO] annonce: [Подвал Путина] Сообщение отправлено, @everyone в тексте: True
+2026-03-09 18:00:51,910 [INFO] annonce: [Подвал Путина] Создать ветку: 'да' -> True
+2026-03-09 18:00:52,470 [INFO] annonce: [Подвал Путина] Создание анонса: user=0578, admin=False
+2026-03-09 18:00:52,470 [INFO] annonce: [Подвал Путина] Слоты (ввод): ''
+2026-03-09 18:00:52,472 [INFO] annonce: [Подвал Путина] ping_everyone=False (admin=False)
+2026-03-09 18:00:52,474 [INFO] annonce: [Подвал Путина] Права бота в канале: mention_everyone=True, create_public_threads=True
+2026-03-09 18:00:52,727 [INFO] annonce: [Подвал Путина] Ветка создана: 1480581147049201774
+2026-03-09 18:00:52,728 [INFO] storage: save_game: msg=1480581147049201774 guild=1258855586569912403 slots=[2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1] ping_everyone=True
+2026-03-09 18:00:53,307 [INFO] annonce: [Подвал Путина] Сообщение отправлено, @everyone в тексте: False
+2026-03-09 18:00:53,307 [INFO] annonce: [Подвал Путина] Создать ветку: '' -> False
+2026-03-09 18:00:53,310 [INFO] storage: save_game: msg=1480581158776344641 guild=1258855586569912403 slots=[1, 1, 1, 1, 1, 1, 1] ping_everyone=False
+2026-03-09 18:08:20,935 [INFO] annonce: [Подвал Путина] Создание анонса: user=tvinkfesslegion, admin=False
+2026-03-09 18:08:20,935 [INFO] annonce: [Подвал Путина] Слоты (ввод): '1'
+2026-03-09 18:08:20,937 [INFO] annonce: [Подвал Путина] Слоты (парсинг): [1]
+2026-03-09 18:08:20,938 [INFO] annonce: [Подвал Путина] ping_everyone=False (admin=False)
+2026-03-09 18:08:20,939 [INFO] annonce: [Подвал Путина] Права бота в канале: mention_everyone=True, create_public_threads=True
+2026-03-09 18:08:21,559 [INFO] annonce: [Подвал Путина] Сообщение отправлено, @everyone в тексте: False
+2026-03-09 18:08:21,559 [INFO] annonce: [Подвал Путина] Создать ветку: '1' -> True
+2026-03-09 18:08:21,928 [INFO] annonce: [Подвал Путина] Ветка создана: 1480583039041142975
+2026-03-09 18:08:21,930 [INFO] storage: save_game: msg=1480583039041142975 guild=1258855586569912403 slots=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ping_everyone=False
+2026-03-09 19:02:25,723 [WARNING] discord.http: We are being rate limited. PATCH https://discord.com/api/v10/channels/1258855586729169027/messages/1480581147049201774 responded with 429. Retrying in 1.66 seconds.
+2026-03-09 20:50:56,636 [INFO] discord.gateway: Shard ID None has successfully RESUMED session a5fa5ed2b66ac6d4a002e26b91ca59cd.
+2026-03-09 20:51:30,946 [INFO] discord.gateway: Shard ID None has successfully RESUMED session a5fa5ed2b66ac6d4a002e26b91ca59cd.
+2026-03-09 20:53:38,159 [ERROR] discord.client: Attempting a reconnect in 0.79s
+Traceback (most recent call last):
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 392, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 571, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1580, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1313, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 1187, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        ssl_shutdown_timeout=ssl_shutdown_timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 1220, in _create_connection_transport
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 728, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2026-03-09 20:54:03,352 [INFO] discord.gateway: Shard ID None has successfully RESUMED session a5fa5ed2b66ac6d4a002e26b91ca59cd.
+2026-03-09 20:55:42,548 [ERROR] discord.client: Attempting a reconnect in 0.59s
+Traceback (most recent call last):
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 392, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 571, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1580, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1313, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 1187, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        ssl_shutdown_timeout=ssl_shutdown_timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 1220, in _create_connection_transport
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 728, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2026-03-09 20:55:46,025 [ERROR] discord.client: Attempting a reconnect in 1.88s
+Traceback (most recent call last):
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\windows_events.py", line 463, in finish_socket_func
+    return ov.getresult()
+           ~~~~~~~~~~~~^^
+OSError: [WinError 64] Указанное сетевое имя более недоступно
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1313, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 1187, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        ssl_shutdown_timeout=ssl_shutdown_timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 1220, in _create_connection_transport
+    await waiter
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 286, in _loop_reading
+    length = fut.result()
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\windows_events.py", line 804, in _poll
+    value = callback(transferred, key, ov)
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\windows_events.py", line 467, in finish_socket_func
+    raise ConnectionResetError(*exc.args)
+ConnectionResetError: [WinError 64] Указанное сетевое имя более недоступно
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 728, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 392, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 571, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1076, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1611, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1580, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\MoorLuck\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1321, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [Указанное сетевое имя более недоступно]
+2026-03-09 20:55:48,465 [INFO] discord.gateway: Shard ID None has successfully RESUMED session a5fa5ed2b66ac6d4a002e26b91ca59cd.
+2026-03-09 22:28:22,604 [INFO] discord.gateway: Shard ID None has successfully RESUMED session a5fa5ed2b66ac6d4a002e26b91ca59cd.
+2026-03-09 23:05:41,000 [INFO] discord.gateway: Shard ID None has successfully RESUMED session a5fa5ed2b66ac6d4a002e26b91ca59cd.
